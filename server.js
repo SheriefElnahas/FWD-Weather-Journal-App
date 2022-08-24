@@ -1,4 +1,4 @@
-const projectData = [];
+let projectData = {};
 
 const express = require('express');
 
@@ -26,21 +26,23 @@ const server = app.listen(3000, () => {
 })
 
 
+
+app.post('/renderData',  (req,res) => {
+
+    projectData = {
+        currentDate: req.body.date,
+        temp: req.body.temp,
+        description: req.body.feelings
+    }
+
+
+
+})
+
+
+
 app.get('/all', (req,res) => {
     res.send(projectData);
     
-     // empty out the array every time we send a new data
-     projectData = [];
+
 })
-
-
-app.post('/renderDetails', (req,res) => {
-    console.log(req.body);
-    const userDetails = {
-        currentDate: req.body.date,
-        temp: req.body.temp,
-        description: req.body.description
-    }
-    projectData.push(userDetails);
-})
-
