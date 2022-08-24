@@ -9,6 +9,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1 class="heading">Weather Journal App</h1>
+        <form action="renderDetails" class="form">
+            <input class="zip-code" type="text" placeholder="enter zip code here" id="zip">
+            <textarea name="feelings" id="feelings" cols="10" rows="10" class="textarea" placeholder="How are you feeling today?"></textarea>
+            <button class="generate-btn" id="generate">Generate</button>
+        </form>
+        <div class="entry-holder" id="entryHolder">
+            <h2>Most Recent Entry</h2>
+            <div id="date">Date: 3/12/2022</div>
+            <div id="temp">Temperature</div>
+            <div id="content">I feel: Hot</div>
+        </div>
+    </div>
+  
 </body>
 </html>
