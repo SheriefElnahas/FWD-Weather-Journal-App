@@ -10,16 +10,13 @@
 </head>
 <body>
     <div class="container">
-
         <h1 class="heading">Weather Journal App</h1>
-
         <form action="renderDetails" class="form">
-            <input class="zip-code" type="text" placeholder="enter zip code here" id="zip">
-            <textarea name="feelings" id="feelings" cols="10" rows="10" class="textarea" placeholder="How are you feeling today?"></textarea>
-
+            <input class="zip-code-input" type="text" placeholder="enter zip code here" id="zip">
+            <textarea name="feelings" id="feelings" cols="10" rows="10" class="feelings" placeholder="How are you feeling today?"></textarea>
             <button class="generate-btn" id="generate">Generate</button>
         </form>
-        <p class="alert">Zip Code Should Not Be Empty</p>
+        <p class="alert-text"></p>
         <div class="entry-holder" id="entryHolder">
             <h2>Most Recent Entry</h2>
             <div id="date"></div>
